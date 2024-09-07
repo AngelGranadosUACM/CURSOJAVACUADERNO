@@ -330,5 +330,5 @@ public class CaracteresEspeciales {
 
 ### Ejercicio para la creacion de emails
 
-![imagen](generadoremail.png "ejercicio")
-![imagen](generadoremail2.png "ejercicio")
+![imagen](generadoremail.png "ejercicios")
+![imagen](generadoremail2.png "ejercicios")
