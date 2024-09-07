@@ -261,3 +261,69 @@ public class ReemplazarSubcadenas {
 }
 
 ```
+
+### Mas formas de concatenar cadenas
+
+```java
+public class MasConcatenacionCadenas {
+    public static void main(String[] args) {
+        //Mas formas de concatenar cadenas en java
+        var cadena1="hola";
+        var cadena2="mundo";
+        var cadena3= cadena1 + " " + cadena2;
+        System.out.println("cadena3 = " + cadena3);
+
+        //Metodo concat
+        cadena3=cadena1.concat(" ").concat("Tonotos");
+        System.out.println("cadena3 usando concat = " + cadena3);
+
+        //StringBuilder
+        var constructorCadenas= new StringBuilder();
+        constructorCadenas.append(cadena1);
+        constructorCadenas.append(" ");
+        constructorCadenas.append(cadena2);
+        var resultado=constructorCadenas.toString();
+        System.out.println("resultado = " + resultado);
+
+        //StringBuffer
+        var stringBuffer= new StringBuffer();
+        stringBuffer.append(cadena1).append(" ").append(cadena2);
+        resultado=stringBuffer.toString();
+        System.out.println("resultado stringbuffer= " + resultado);
+
+        //join
+        resultado=String.join(" ", cadena1, cadena2, "tonotos");
+        System.out.println("resultado join= " + resultado);
+    }
+}
+```
+
+### Caracteres Especiales en Java
+
+```java
+public class CaracteresEspeciales {
+    public static void main(String[] args) {
+        // Caracteres Especiales
+        // '\n' - imprimir un salto de linea
+        var cadena1 = "Hola\nMundo";
+        System.out.println("cadena1 = " + cadena1);
+
+        // '\t' - tabulador
+        var cadena2 = "\tHola\tMundo";
+        System.out.println("cadena2 = " + cadena2);
+
+        // '\'' - agrega una comilla simple
+        var cadena3 = "Hola \' Mundo";
+        System.out.println("cadena3 = " + cadena3);
+
+        // '\"' - agrega una comilla doble
+        var cadena4 = "Hola \" Mundo";
+        System.out.println("cadena4 = " + cadena4);
+
+        // '\\' - caracter de diagonal invertida
+        var cadena5 = "Hola \\ Mundo";
+        System.out.println("cadena5 = " + cadena5);
+
+    }
+}
+```
