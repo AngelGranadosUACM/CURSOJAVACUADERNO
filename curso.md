@@ -160,7 +160,8 @@ public class InmutabilidadCadenas {
         //creamos una cadena2 que almacenara la referencia de cadena1
         var cadena2=cadena1;
         cadena1="adios";
-        System.out.println("cadena1 = " + cadena1);
+        System.out.println("cadena1 modificado = " + cadena1);
+        System.out.println("cadena2 = " + cadena2);
     }
 }
 ```
@@ -216,4 +217,47 @@ public class ManejoSubcadenas {
 
     }
 }
+```
+
+### Busqueda de subcadenas
+
+```java
+public class BusquedaSubcadenas {
+    public static void main(String[] args) {
+        // Buscar subcadenas
+        // indexOf - Devuelve el indice de la primera aparicion de la subcadena
+        var cadena1 = "Hola Mundo";
+        // subcadena a buscar "Hola"
+        var indice1 = cadena1.indexOf("Hola");
+        System.out.println("indice1 = " + indice1);
+        // lastIndexOf - devuelve el indice de la ultima aparicion de la subcadena
+        // subcadena de Mundo
+        var indice2 = cadena1.lastIndexOf("Mundo");
+        System.out.println("indice2 = " + indice2);
+        // subcadena no encontrada devuelve -1
+        var indice3 = cadena1.lastIndexOf("Java");
+        System.out.println("indice3 = " + indice3);
+    }
+}
+```
+
+### Reemplazar subcadenas
+
+```java
+public class ReemplazarSubcadenas {
+    public static void main(String[] args) {
+        // Reemplazar subcadenas
+        var cadena = "Hola Mundo";
+        System.out.println("cadena original = " + cadena);
+
+        // Reemplazar "Mundo" por "a todos"
+        var nuevaCadena = cadena.replace("Mundo", "a todos");
+        System.out.println("nuevaCadena = " + nuevaCadena);
+
+        // Reemplazar "Hola" por "Adios"
+        nuevaCadena = cadena.replace("Hola", "Saludos");
+        System.out.println("nuevaCadena = " + nuevaCadena);
+    }
+}
+
 ```
