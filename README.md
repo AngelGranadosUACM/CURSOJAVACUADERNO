@@ -494,4 +494,69 @@ __Resultado del ejercicio__
 
 #### SOLUCION AL EJERCICIO
 ```java
+import java.util.Scanner;
+
+public class RecetasCocina {
+    public static void main(String[] args) {
+        System.out.println("*** Recetas de Cocina ***");
+        var consola = new Scanner(System.in);
+
+        // Nombre de la receta
+        System.out.print("Ingresa el nombre de la receta: ");
+        var nombreReceta = consola.nextLine();
+
+        // Ingredientes
+        System.out.print("Ingresa los ingredientes: ");
+        var ingredientes = consola.nextLine();
+
+        // Tiempo de preparación
+        System.out.print("Ingresa el tiempo de preparación (min): ");
+        var tiempoPreparacion = Integer.parseInt(consola.nextLine());
+
+        // Dificultad de la preperación
+        System.out.print("Ingresa la dificultad (Fácil/Medio/Dificil): ");
+        var dificultadPreperacion = consola.nextLine();
+
+        // Imprimir los valores de la receta
+        System.out.println("\n--- Receta de Cocina ---");
+        System.out.println("\tNombre receta: " + nombreReceta);
+        System.out.println("\tIngredientes: " + ingredientes);
+        System.out.println("\tTiempo de preparación: " + tiempoPreparacion + " minutos");
+        System.out.println("\tDificultad: " + dificultadPreperacion);
+    }
+}
+
+```
+
+***
+## Números Aleatorios (Random)
+
+```java
+package Java.ManejoConsola.src;
+
+import java.util.Random;
+
+public class NumerosAleatorios {
+    public static void main(String[] args) {
+        System.out.println("*** Números Aleatorios ***");
+        var random = new Random();
+
+        // Generar un numero aleatorio entre 0 y 9
+        var numeroAleatorio = random.nextInt(10);
+        System.out.println("numeroAleatorio entre 0 y 9 = " + numeroAleatorio);
+
+        // Generar un numero aleatorio entre 1 y 10
+        numeroAleatorio = random.nextInt(10) + 1;
+        System.out.println("numeroAleatorio entre 1 y 10 = " + numeroAleatorio);
+
+        // Generar un numero flotante entre 0.0 y 1.0
+        var flotanteAleatorio = random.nextFloat();
+        System.out.println("flotanteAleatorio = " + flotanteAleatorio);
+
+        // Simular el lanzamiento de un dado (1 y 6)
+        var dado = random.nextInt(6) + 1;
+        System.out.println("Resultado de lanzar el dado = " + dado);
+    }
+}
+
 ```
